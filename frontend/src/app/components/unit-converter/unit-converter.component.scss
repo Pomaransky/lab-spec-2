@@ -1,0 +1,13 @@
+.red-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,23 @@
+<div class="surface-200 border-round p-4">
+  <div class="grid grid-nogutter align-items-center">
+    <div class="col-6 text-right p-3">Wybierz jednostki do przeliczenia:</div>
+    <div class="col-6 py-2">
+      <p-dropdown [options]="units" [(ngModel)]="selectedUnit" optionLabel="label" (onChange)="changeUnits($event)">
+      </p-dropdown>
+    </div>
+  </div>
+  <div class="grid grid-nogutter align-items-center">
+    <div class="col-6 text-right p-3">Wprowadź liczbę:</div>
+    <div class="col-6 py-2">
+      <p-inputNumber [(ngModel)]="inputValue" [minFractionDigits]="0" [maxFractionDigits]="2"
+        (onInput)="changeValue($event)">
+      </p-inputNumber>
+    </div>
+  </div>
+  <div>
+    <div class="text-right pt-4 flex justify-content-end">
+      <div>Wynik: {{ (outPutValue | async)|number: '.3' }} {{ resultUnit | async}}</div>
+      <div class="red-ball ml-3"></div>
+    </div>
+  </div>
+</div>
