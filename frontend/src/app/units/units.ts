@@ -126,13 +126,13 @@ export const lengthUnits: UnitInterface[] = [
 export const weightUnits: UnitInterface[] = [
   {
     label: 'Kilogramy na gramy',
-    multiply: false,
+    multiply: true,
     figureForCalculation: 1000,
     resultUnit: 'g',
   },
   {
     label: 'Gramy na kilogramy',
-    multiply: true,
+    multiply: false,
     figureForCalculation: 1000,
     resultUnit: 'kg',
   },

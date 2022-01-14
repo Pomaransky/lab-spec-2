@@ -10,4 +10,5 @@ import { lengthUnits, weightUnits } from './units/units';
 })
 export class AppComponent {
   weightUnits = weightUnits;
+  lengthUnits = lengthUnits;
 }

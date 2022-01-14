@@ -1,26 +1,21 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { UnitInterface } from 'src/app/models/app.model';
-import { lengthUnits } from 'src/app/units/units';
 
 @Component({
   selector: 'app-unit-converter',
   templateUrl: './unit-converter.component.html',
   styleUrls: ['./unit-converter.component.scss'],
 })
-export class UnitConverterComponent {
-  @Input() units = lengthUnits;
-  selectedUnit: UnitInterface = this.units[0];
+export class UnitConverterComponent implements OnInit {
+  @Input() units!: UnitInterface[];
+  selectedUnit!: UnitInterface;
   inputValue = 0;
   outPutValue: BehaviorSubject<number> = new BehaviorSubject<number>(0.0);
   resultUnit: BehaviorSubject<string> = new BehaviorSubject<string>('cm');
-  constructor() {
-    this.outPutValue.subscribe({
-      next: (val) => val,
-    });
-    this.resultUnit.subscribe({
-      next: (unit) => unit,
-    });
+
+  ngOnInit(): void {
+    this.resultUnit.next(this.units[0].resultUnit);
   }
 
   changeUnits(event: any): void {
