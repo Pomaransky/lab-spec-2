@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { UnitInterface } from './models/app.model';
 import { lengthUnits, weightUnits } from './units/units';
 
@@ -9,6 +8,6 @@ import { lengthUnits, weightUnits } from './units/units';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  weightUnits = weightUnits;
-  lengthUnits = lengthUnits;
+  weightUnits: UnitInterface[] = weightUnits;
+  lengthUnits: UnitInterface[] = lengthUnits;
 }

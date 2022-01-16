@@ -11,7 +11,7 @@ export class UnitConverterComponent implements OnInit {
   @Input() units!: UnitInterface[];
   selectedUnit!: UnitInterface;
   inputValue = 0;
-  outPutValue: BehaviorSubject<number> = new BehaviorSubject<number>(0.0);
+  resultValue: BehaviorSubject<number> = new BehaviorSubject<number>(0.0);
   resultUnit: BehaviorSubject<string> = new BehaviorSubject<string>('cm');
 
   ngOnInit(): void {
@@ -26,9 +26,9 @@ export class UnitConverterComponent implements OnInit {
 
   converter(unit: UnitInterface, value: number): void {
     if (unit.multiply) {
-      this.outPutValue.next(value * unit.figureForCalculation);
+      this.resultValue.next(value * unit.figureForCalculation);
     } else {
-      this.outPutValue.next(value / unit.figureForCalculation);
+      this.resultValue.next(value / unit.figureForCalculation);
     }
   }
 

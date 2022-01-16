@@ -16,7 +16,7 @@
   </div>
   <div>
     <div class="text-right pt-4 flex justify-content-end">
-      <div>Wynik: {{ (outPutValue | async)|number: '.3': 'pl-PL' }} {{ resultUnit | async}}</div>
+      <div>Wynik: {{ (resultValue | async)|number: '.3': 'pl-PL' }} {{ resultUnit | async}}</div>
       <div class="red-ball ml-3"></div>
     </div>
   </div>
