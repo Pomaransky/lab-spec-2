@@ -131,9 +131,70 @@ export const weightUnits: UnitInterface[] = [
     resultUnit: 'g',
   },
   {
+    label: 'Kilogramy na dekagramy',
+    multiply: true,
+    figureForCalculation: 100,
+    resultUnit: 'kg',
+  },
+  {
+    label: 'Kilogramy na tony',
+    multiply: false,
+    figureForCalculation: 1000,
+    resultUnit: 't',
+  },
+  {
     label: 'Gramy na kilogramy',
     multiply: false,
     figureForCalculation: 1000,
     resultUnit: 'kg',
   },
+  {
+    label: 'Gramy na dekagramy',
+    multiply: false,
+    figureForCalculation: 10,
+    resultUnit: 'dag',
+  },
+  {
+    label: 'Gramy na tony',
+    multiply: false,
+    figureForCalculation: 1000000,
+    resultUnit: 't',
+  },
+  {
+    label: 'Dekagramy na gramy',
+    multiply: true,
+    figureForCalculation: 10,
+    resultUnit: 'g',
+  },
+  {
+    label: 'Dekagramy na kilogramy',
+    multiply: true,
+    figureForCalculation: 100,
+    resultUnit: 'kg',
+  },
+  {
+    label: 'Dekagramy na tony',
+    multiply: false,
+    figureForCalculation: 100000,
+    resultUnit: 't',
+  },
+  {
+    label: 'Tony na gramy',
+    multiply: true,
+    figureForCalculation: 1000000,
+    resultUnit: 'g',
+  },
+  {
+    label: 'Tony na dekagramy',
+    multiply: true,
+    figureForCalculation: 100000,
+    resultUnit: 'dag',
+  },
+  {
+    label: 'Tony na kilogramy',
+    multiply: true,
+    figureForCalculation: 1000,
+    resultUnit: 'kg',
+  },
+  
 ];
