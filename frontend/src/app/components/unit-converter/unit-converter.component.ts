@@ -15,7 +15,9 @@ export class UnitConverterComponent implements OnInit {
   resultUnit: BehaviorSubject<string> = new BehaviorSubject<string>('cm');
 
   ngOnInit(): void {
-    this.resultUnit.next(this.units[0].resultUnit);
+    if (this.units) {
+      this.resultUnit.next(this.units[0].resultUnit);
+    }
   }
 
   changeUnits(event: any): void {
